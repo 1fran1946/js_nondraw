@@ -466,12 +466,15 @@ const but04=()=>{// полигон
 	//console.log(a12);
 	if(document.getElementById('ute'))ute.remove();
 	//svg.innerHTML+=
+	//if(n===6){}
 	if(a10.length>2){
 	figs.innerHTML+=
 		`<path class="fg" id='p`+n+`' d="m`
 		+a12
 		+`z" fill="`
-		+ink+`"  stroke='black' stroke-width='1' `
+		+ink+`"  `
+		+((n!=6)?`stroke='black' stroke-width='1' `:`stroke='red' stroke-width='5' `)
+		
 		+` data-x='`
 		+(a11[0].x|0)
 		+`' data-y='`
@@ -805,7 +808,11 @@ a10.push(a10[0]);
 		//+a12
 		+a13
 		+`z" fill="`
-		+ink+`"  stroke='black' stroke-width='1' `
+		//+ink+`"  stroke='black' stroke-width='1' `
+		
+		+ink+`"  `
+		+((n!=6)?`stroke='black' stroke-width='1' `:`stroke='red' stroke-width='5' `)		
+		
 		+` data-x='`
 		+(a11[0].x|0)
 		+`' data-y='`
