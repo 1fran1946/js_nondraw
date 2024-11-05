@@ -14,6 +14,7 @@
   *:not(hr), *::after, *::before {box-sizing: border-box;margin:0;padding:0;border:0}ul {list-style-type: none}
 #i{padding: 0px 0;display: inline-block;background: linear-gradient(rgba(0,0,0,0.9), blue); 
 text-align: center;
+d0isplay:none;
 }
 .hide{display:none}
 
@@ -51,6 +52,13 @@ b0ackground-color:yellow;
 	width:22px;height:8px;background:black;top:-8px;left:0px;}
 .b:after {position:absolute;display: block;content:'';
 	width:22px;height:8px;background:black;bottom:-8px;left:0px;}
+	
+#eon {position:fixed; width:100px; height:100px;
+	top:50%; left:50%; transform: translate(-50%, -50%);
+	d0isplay:block;display:none;z-index:555; 
+	background:red; border:7px solid black;}
+#wes div {border:2px solid blue;background:yellow;}	
+		
   </style>  
 </head>
 <body text="black" bgcolor="white">
@@ -82,6 +90,7 @@ b0ackground-color:yellow;
 	}	
 </script>
 
+<div id="eon" onclick="this.style.display='none';"></div>
 <div id="i">
 <svg id="svg" width="900" height="415" viewBox="0 0 900 415" fill="none" onmousedown="
 if(curve.checked){
@@ -1128,6 +1137,7 @@ const dev=()=>{
 	aw=[];// брезентов поле под огурцы
 	for (let i=0; i<(420/10|0); i++)
 		{aw.push([]); for (let j=0; j<(900/10|0); j++)aw[i].push(0)}
+	//alert([aw.length,aw[0].length].join(' '));	
 	/*
 	for (let i=0; i<(10); i++)
 		{aw.push([]); for (let j=0; j<(10); j++)aw[i].push(0)}
@@ -1230,7 +1240,8 @@ const dev=()=>{
 			}//line
 		}
 	});//f.forEach
-	
+
+//alert(aw[5].join(''));	
 	//alert(sry(0));alert(i);
 	//aw.forEach((c,i)=>{alert(sry(i))}); 
 	
@@ -1240,11 +1251,13 @@ const dev=()=>{
 	sn=cry(0);
 	let nky=0;
 	aw.forEach((c,i)=>{let d=sry(i); 
-		//alert(d);
+		//if(!i)alert([d.length,aw.length,aw[0].length,].join(' '));
 		if (d!==sn){ poy(nky,d); nky++; sn=d;}
 		});
 		
-	//alert(nk);
+//aw=aw.slice(0,nky-1);// обрезка 101	-1
+//alert([nky-1,'рядов'].join(' '));
+//alert(aw[0].join(''));
 	//aw=aw.map((c,i)=>{if (i>=nk){ return c.map(u=>0)} else return c});
 //aw=aw.map((c,i)=>(i<nky)?c.map(u=>u):c.map(u=>0));//ЧЖАТИЕ
 	//aw=aw.map((c,i)=>(i<nk)?c.map(u=>9):c.map(u=>8));
@@ -1262,11 +1275,13 @@ const dev=()=>{
 	/**/
 	sn=crx(0);// еще подвижки
 	let nk=0;	
-	aw.forEach((c,i)=>{
+	aw[0].forEach((c,i)=>{		
 		let d=srx(i); 
+		//if(!i)alert([d.length,aw.length,aw[0].length].join(' '));
 		if (d!==sn){ pox(nk,d); nk++; sn=d;}
 		});	
-		
+//alert(aw[0].join(''));		
+//alert([nk-1,'столбцов'].join(' '));		
 //aw=aw.map(c=>c.map((u,i)=>(i<nk)?u:0));	// сжаттие
 	//aw=aw.map(c=>c.map((u,i)=>9));
 	//console.log(aww);
@@ -1288,8 +1303,21 @@ aw=aw.slice(0,nky-1);// обрезка 101
 }
 //------------------------------------------
 const tbl=a=>{
+	const cc=['white','yellow','tomato','violet','lime','blue','black','navy','teal','red','green'];
 	if(!a.length)alert('empty');
 	console.log(a);
+	eon.style.display='block';
+	let d='<div></div>'.repeat(a.length*a[0].length);
+	d='';//a[j][i]
+	a.forEach(i=>i.forEach(j=>d+='<div style="background:'+cc[j%10]+'"></div>'));
+
+	
+	eon.innerHTML='<div id="wes"   '+
+	'style="display:grid;height:100%;'+
+	'background:lime;padding:2px;'+
+	'grid-template-rows:'+'1fr '.repeat(a.length)+';'+
+	'grid-template-columns:'+'1fr '.repeat(a[0].length)+';'+
+	'">'+d+'</div>';
 	let s='';
 	for (let i=0; i<a.length; i++){
 		s+='<tr>';
