@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!-- saved from url=(0039)https://1fran1946.github.io/js_nondraw/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/x-icon" href="data:image/gif;base64,R0lGODlhEAAQAPcAAAkYLAocNxQyWy1PkUtntS1etSRasxY/hRcwZSQtXDo1aD0yYjg3XQ8XLgcNGQ4WIwseOQ0mTyRNjl9wzImJ2ECA0WKb7Q5QqRtBhiM2b0RCf1FDhkJBahAbNQMLFQ8aLg4nTAgkUBpFfXmv6Zax4Umb2oTD8gA9jxVEfhY/eS84b0E5aUREbxkoSQYUKgwbMAkjSgEdSg1BfEGR3FeQ3SSG4W268gA4jgo4chJCfRcoXD06Y2ZVfCUxVQseNw8kPwYjTQIiXRJJiy5/11Oc8E6m7n/E9AJUsQc7eEV0qQktaDxAc2RVgCgyWhAlQhYwTggvXwEkYhVPkR5swjmR6nfS9IfK9GKs5q/H3a3I4ggybxolXC0pURQkRi5CWkBXcwo1bgM2dxtgqTuW7X3A9+D2+c3M87LL7ztzrkd5sHWQvI2Pwci026+wy4KauEpnhQw+egU8g2uo3dXo//T09//g+eng983g+rPC8r238Lev2oF9plRMbBcpTDdahTxjhRBEgw9JkYa86Ovz//Pu9f/y+fD1+sjr+KvA8LjQ8IagvkFSjCorYwciVTpolGV/mws5dAAtdRpmr4O98sXj8PX/+N/x95vV8Zy/3Mbf8/////Dr88rH0XeNrDpiiShLcQs0agMtan6hzbDJ9oe98XHP+nK78xJ22AE5igE7iRk9gGlwo19lgmB/qWGCnmx8k0lkicjW7IOkwhxRmihzyDqa737D9iR4zBJBhRNJkCVOllprpgogUCZHfgQwWxcxUwsjShMwYgAnYwU3fS9owzeS63W89gdRpBZEgk5nrHNyr25moUlUiElaig8vUBYrSQoiSAQdRgk3aCBFjkxvyi2L21uo7AAzhCtJin1pp/fP2rGFrHp2mDRJehAZNg4fOgwiQgohSh1BfVRLqb+T5V9/z3ia5hJGmD5YlWNNgcSdv4Roois1Yis+cAUULA8eNgoaMxEkSDJGg4l2xuvZ83J800RvyiFQnTVEd1NQfHBomFJPfzU1WEVHeBojQRkfNyH/C05FVFNDQVBFMi4wAwEAAAAh+QQFewCaACwAAAAAEAAQAAAI/wABQAABAwgUMHAAQQIFCxg0cPACRAgRI0iUMHECRQoVK1i0cPEESBAhQ4gUMXIESRIlS5g0cfIGTBgxY8iUMXMGTRo1a9i0cfMIUCBBgwgVMnQIUSJFixg1cvQKVChRo0iVMnUKVSpVq1i1cvUMWDBhw4gVM3YMWTJly5g1c/YOXDhx48iVM3cOXTp169i1c/cQYECBAwkWNHgQYUKFCxk2dPgSZEiRI0mWNHkSZUqVK1m2dPkUaFChQ4kWNXoUaVKlS5k2dfoWbFixY8mWNXsWbVq1a9m2dfsYcGDBgwkXNnwYcWLFixk3dvwadGjRo0mXNn0adWrVq1m3dv0ceCRw4cOJFzd+HHly5cuZN3f+Hnx48ePJlzd/Hn169evZt3f/BAQAOw==">
@@ -54,36 +54,11 @@ b0ackground-color:yellow;
   </style>  
 </head>
 <body text="black" bgcolor="white">
-<script>
-	const onmm=(event)=>{event.stopPropagation();}//onmm(event)
-	const onmu=(event)=>{event.stopPropagation();}// onmd(event)
-	const onfn=(event,n,m)=>{
-		if(!curve.checked)onmm(event);//event.stopPropagation();
-		if(document.getElementById('ute'))ute.remove();
-		move=n;
-		bok=m;	
-		}
-		
-	const onmd0=(event,thix,n,m)=>{
-		onfn(event,n,m);
-		den0(thix);		
-	}	
-	const onmd1=(event,thix,n,m)=>{
-		onfn(event,n,m);
-		den1(thix);		
-	}
-	const onmd3=(event,thix,n,m)=>{
-		onfn(event,n,m);
-		den3(thix);
-	}	
-	const onmd4=(event,thix,n,m)=>{
-		onfn(event,n,m);
-		den4(thix,n);
-	}	
-</script>
 
-<div id="i">
-<svg id="svg" width="900" height="415" viewBox="0 0 900 415" fill="none" onmousedown="
+
+<div id=i>
+<svg id="svg" width="900" height="415" viewBox="0 0 900 415" fill="none"
+onmousedown="
 if(curve.checked){
 	const o={// вершина ломаной добавление/выделение
 		x:stepx*(Math.round((event.clientX-i.offsetLeft
@@ -94,8 +69,8 @@ if(curve.checked){
 
 	// попал в заповедную зону
 	let g=-1;// нарушитель
-	for (let i=0;i&lt;a.length;i++)if(((a[i].x-o.x)*(a[i].x-o.x)+(a[i].y-o.y)*(a[i].y-o.y))&lt;160)g=i;
-	if (g&gt;-1)
+	for (let i=0;i<a.length;i++)if(((a[i].x-o.x)*(a[i].x-o.x)+(a[i].y-o.y)*(a[i].y-o.y))<160)g=i;
+	if (g>-1)
 		{
 			c=g;	
 			vw();
@@ -109,46 +84,51 @@ if(curve.checked){
 		}
 }
 else{
-	dawn[&#39;down&#39;]=true;
+	dawn['down']=true;
 	dawn.x=stepx*(Math.floor((event.clientX-i.offsetLeft)/stepx)); 
 	dawn.y=stepy*(Math.floor((event.clientY-i.offsetTop)/stepy));
-	eff.setAttribute(&#39;x&#39;,dawn.x);
-	eff.setAttribute(&#39;y&#39;,dawn.y);
-	eff.classList.remove(&#39;hide&#39;);
+	eff.setAttribute('x',dawn.x);
+	eff.setAttribute('y',dawn.y);
+	eff.classList.remove('hide');
 }
-" onmousemove="
+"
+
+onmousemove="
 if(curve.checked){}
 else{
-	if(dawn[&#39;down&#39;]){
+	if(dawn['down']){
 	let x=stepx*(Math.floor((dawn.x-event.clientX+i.offsetLeft)/stepx));
 	let y=stepy*(Math.floor((dawn.y-event.clientY+i.offsetTop)/stepy));
-	eff.setAttribute(&#39;width&#39;,Math.abs(x));
-	eff.setAttribute(&#39;height&#39;,Math.abs(y));
+	eff.setAttribute('width',Math.abs(x));
+	eff.setAttribute('height',Math.abs(y));
 	dawn.w=Math.abs(x);
 	dawn.h=Math.abs(y);
 	}
 }
-" onmouseup="
+"
+onmouseup="
 if(curve.checked){}
 else{
-	dawn[&#39;down&#39;]=false;
-	eff.classList.add(&#39;hide&#39;);
+	dawn['down']=false;
+	eff.classList.add('hide');
 	let x=stepx*(Math.floor((dawn.x-event.clientX+i.offsetLeft)/stepx));
 	let y=stepy*(Math.floor((dawn.y-event.clientY+i.offsetTop)/stepy));
 
-	//console.log([&#39;up&#39;,dawn.x,dawn.y,Math.abs(x),Math.abs(y)].join(&#39;,&#39;));
+	//console.log(['up',dawn.x,dawn.y,Math.abs(x),Math.abs(y)].join(','));
 
-	if(document.getElementById(&#39;ute&#39;))ute.remove();
+	if(document.getElementById('ute'))ute.remove();
 	svg.innerHTML+=
-		`&lt;rect id=&#39;ute&#39; x=&#39;`
-		+dawn.x+`&#39; y=&#39;`
-		+dawn.y+`&#39; width=&#39;`
-		+dawn.w+`&#39; height=&#39;`
-		+dawn.h+`&#39; stroke=&#39;red&#39; `
-		+`stroke-width=&#39;1&#39; fill=&#39;none&#39;&gt;&lt;/rect&gt;`;
+		`<rect id='ute' x='`
+		+dawn.x+`' y='`
+		+dawn.y+`' width='`
+		+dawn.w+`' height='`
+		+dawn.h+`' stroke='red' `
+		+`stroke-width='1' fill='none'></rect>`;
 	move=0;
 }
-">
+"
+
+>
 <style type="text/css">
 .rect1, .polygon1 {stroke: blue;}
 .txt1 {font-family: Arial; font-size: 12px; line-height: 0; fill:white;}
@@ -156,73 +136,7 @@ textPath {font-family: sans-serif; font-size: 16px;}
 </style>
 <rect class="x" x="0" y="0" width="900" height="415" fill="#ded"></rect>
 
-<g id="grid1"><path d="M0 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M20 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M40 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M60 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M80 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M100 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M120 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M140 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M160 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M180 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M200 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M220 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M240 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M260 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M280 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M300 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M320 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M340 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M360 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M380 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M400 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M420 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M440 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M460 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M480 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M500 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M520 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M540 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M560 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M580 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M600 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M620 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M640 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M660 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M680 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M700 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M720 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M740 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M760 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M780 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M800 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M820 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M840 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M860 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M880 0 V420" stroke="gray" stroke-width="1"></path>
-<path d="M0 0 H900" stroke="gray" stroke-width="1"></path>
-<path d="M0 20 H900" stroke="gray" stroke-width="1"></path>
-<path d="M0 40 H900" stroke="gray" stroke-width="1"></path>
-<path d="M0 60 H900" stroke="gray" stroke-width="1"></path>
-<path d="M0 80 H900" stroke="gray" stroke-width="1"></path>
-<path d="M0 100 H900" stroke="gray" stroke-width="1"></path>
-<path d="M0 120 H900" stroke="gray" stroke-width="1"></path>
-<path d="M0 140 H900" stroke="gray" stroke-width="1"></path>
-<path d="M0 160 H900" stroke="gray" stroke-width="1"></path>
-<path d="M0 180 H900" stroke="gray" stroke-width="1"></path>
-<path d="M0 200 H900" stroke="gray" stroke-width="1"></path>
-<path d="M0 220 H900" stroke="gray" stroke-width="1"></path>
-<path d="M0 240 H900" stroke="gray" stroke-width="1"></path>
-<path d="M0 260 H900" stroke="gray" stroke-width="1"></path>
-<path d="M0 280 H900" stroke="gray" stroke-width="1"></path>
-<path d="M0 300 H900" stroke="gray" stroke-width="1"></path>
-<path d="M0 320 H900" stroke="gray" stroke-width="1"></path>
-<path d="M0 340 H900" stroke="gray" stroke-width="1"></path>
-<path d="M0 360 H900" stroke="gray" stroke-width="1"></path>
-<path d="M0 380 H900" stroke="gray" stroke-width="1"></path>
-<path d="M0 400 H900" stroke="gray" stroke-width="1"></path>
-</g>
+<g id="grid1"></g>
 
 
 
@@ -242,14 +156,14 @@ textPath {font-family: sans-serif; font-size: 16px;}
 <!-- <label onclick="but2()">line /</label>
 <label onclick="but3()">line \</label> -->
 <button style="background: #def" onclick="but04();
-a=[];c=-1;gogo.innerHTML=&#39;&#39;;
+a=[];c=-1;gogo.innerHTML='';
 ">polygon</button>
 <button style="background: #def" onclick="but10();
-a=[];c=-1;gogo.innerHTML=&#39;&#39;;
+a=[];c=-1;gogo.innerHTML='';
 ">bezie</button>
-<button style="background: #def" onclick="a=[];c=-1;gogo.innerHTML=&#39;&#39;;// стирает путь">clear<br>path
+<button style="background: #def" onclick="a=[];c=-1;gogo.innerHTML='';// стирает путь">clear<br>path</label>
 
-</button><button onclick="grid()">grid</button>
+<button onclick="grid()">grid</button>
 
 
 
@@ -258,47 +172,49 @@ a=[];c=-1;gogo.innerHTML=&#39;&#39;;
 <button onclick="but08()">fial</button>
 <button onclick="but09()">runcap</button>
 <button style="background: #dead" onclick="toBack(move)">toBack</button>
-<button style="background: #dead" onclick="del()">×</button>
-<button onclick="dev()">debug</button>
+<button style="background: #dead" onclick="del()">&times;</button>
+
 
  <article class="palet" style="display: flex;align-items:center;">
-	<div class="calor a" style="background: white;"></div>
-	<div class="calor" style="background: red;"></div>
-	<div class="calor b" style="background: black;"></div>
-	<div class="calor" style="background: green;"></div>
-	<div class="calor" style="background: yellow;"></div>
-	<div class="calor" style="background: lime;"></div>
-	<div class="calor" style="background: violet;"></div>
-	<div class="calor" style="background: purple;"></div>
-	<div class="calor" style="background: navy;"></div>
-	<div class="calor" style="background: aqua;"></div><br>
-	<div class="calor" style="background: blue;"></div>
-	<div class="calor" style="background: gold;"></div>
-	<div class="calor" style="background: teal;"></div>
-	<div class="calor" style="background: olive;"></div>
-	<div class="calor" style="background: maroon;"></div>
-	<div class="calor" style="background: silver;"></div>
-	<div class="calor" style="background: springgreen;"></div>
-	<div class="calor" style="background: rgb(108, 117, 125);"></div>	
-	<div class="calor" style="background: fuchsia;"></div>	
-	<div class="calor" style="background: transparent;"></div>	
+	<div class="calor a"></div>
+	<div class="calor"></div>
+	<div class="calor b"></div>
+	<div class="calor"></div>
+	<div class="calor"></div>
+	<div class="calor"></div>
+	<div class="calor"></div>
+	<div class="calor"></div>
+	<div class="calor"></div>
+	<div class="calor"></div><br>
+	<div class="calor"></div>
+	<div class="calor"></div>
+	<div class="calor"></div>
+	<div class="calor"></div>
+	<div class="calor"></div>
+	<div class="calor"></div>
+	<div class="calor"></div>
+	<div class="calor"></div>	
+	<div class="calor"></div>	
+	<div class="calor"></div>	
 <div style="padding-left:8px;display:flex; flex-direction:column;">
-<label><input type="radio" name="kore" id="inka" checked=""> fill</label>
+<label><input type="radio" name="kore" id="inka" checked> fill</label>
 <label><input type="radio" name="kore" id="paps"> strok</label>
 </div>	
 </article>
 
 <label id="waw">
-<input id="curve" type="checkbox" onchange="if(document.getElementById(&#39;ute&#39;))ute.remove();">
+<input id="curve" type="checkbox" onchange="if(document.getElementById('ute'))ute.remove();"  />
 <!--  checked  -->
 </label>
 <div style=""></div>
 <div id="pascal">
 
-<div class="copybara" onclick="cpy(this.parentElement);">
+<div class="copybara" 
+onclick="cpy(this.parentElement);">
 </div>
 </div>
-<textarea id="cop" rows="1" cols="90" style="position:absolute; left:-9999px; color: white; background: green;" title="используется для копирования"></textarea>
+<textarea id="cop" rows="1" cols="90" style="position:absolute; left:-9999px; color: white; background: green;" title="используется для копирования">
+</textarea>
 
 
 <script>/*
@@ -328,11 +244,7 @@ let n=0;
 let ink=cc[0];//4//цвет заливки
 let dawn={x:0,y:0,w:1,h:1};// знакоместо
 let pap=cc[2];//18//'black';// цвет обводки
-let aw=[];// брезентов поле под огурцы
-//for (let i=0; i<(420/10|0); i++)
-//	{aw.push([]); for (let j=0; j<(900/10|0); j++)aw[i].push(0)}
-for (let i=0; i<(10); i++)
-	{aw.push([]); for (let j=0; j<(10); j++)aw[i].push(0)}
+
 
 const adi=()=>{// пиксели в проценты
 	let xma,xmi,yma,ymi,dx,dy;
@@ -484,10 +396,10 @@ const pas=()=>{// pascalabc.net код
 		return m.join('')+s+'<br>';})// end of map au
 	.join('')
 +'end.<br>'	;
-	pascal.innerHTML+=
-		'<div class="copybara" '
-		+'onclick="cpy(this.parentElement);">'
-		+'</div>';
+pascal.innerHTML+=
+'<div class="copybara" '
++'onclick="cpy(this.parentElement);">'
++'</div>';
 }
 
 //***************
@@ -512,17 +424,22 @@ const but00=()=>{// прямоугольник
 	if(document.getElementById('ute'))ute.remove();// id='mov'
 	//svg.innerHTML+=
 	figs.innerHTML+=
-		'<rect class="fg"  id="r'
-		+n+'" x="'
-		+dawn.x+'" y="'
-		+dawn.y+'" width="'
-		+dawn.w+'" height="'
-		+dawn.h+'" fill="'//transparent`
+		`<rect class="fg"  id='r`
+		+n+`' x='`
+		+dawn.x+`' y='`
+		+dawn.y+`' width='`
+		+dawn.w+`' height='`
+		+dawn.h+`' fill='`//transparent`
 		+ink
-		+'" stroke='+pap+' stroke-width="'+(ink=='transparent'?5:2)+'" '//
-		+' onmouseup="onmu(event)" onmousemove="onmm(event)"'
-		+' onmousedown="onmd0(event,this,'+n+',0)"'
-		+'></rect>';
+		+`' stroke=${pap} stroke-width='`+(ink=='transparent'?5:2)+`' `//
+		+` onmouseup="event.stopPropagation();" `
+		+` onmousemove="event.stopPropagation();" `
+		+` onmousedown="if(!curve.checked){event.stopPropagation();} `
+		+` if(document.getElementById('ute'))ute.remove(); `
+		//alert(`+n+`);
+		+` den0(this); `
+		+`move=`
+		+n+`;bok=0;"></rect>`;
 	au[n]={};for (let key in dawn){au[n][key] = dawn[key];}
 	bok=0;
 	console.log(au);
@@ -535,15 +452,19 @@ const but01=()=>{//circle
 	if(document.getElementById('ute'))ute.remove();
 	//svg.innerHTML+=
 	figs.innerHTML+=
-		'<ellipse class="fg" id="e'+n+'" rx="'
-		+(dawn.w/2)+'" ry="'
-		+(dawn.h/2)+'" cx="'
-		+(dawn.x+dawn.w/2)+'" cy="'
-		+(dawn.y+dawn.h/2)+'" fill="'
-		+ink+'"  stroke="'+pap+'" stroke-width="'+(ink=='transparent'?5:2)+'" '
-		+' onmouseup="onmu(event)" onmousemove="onmm(event)"'
-		+' onmousedown="onmd1(event,this,'+n+',0)"'
-		+'></ellipse>';
+		`<ellipse class="fg" id='e`+n+`' rx="`
+		+(dawn.w/2)+`" ry="`
+		+(dawn.h/2)+`" cx="`
+		+(dawn.x+dawn.w/2)+`" cy="`
+		+(dawn.y+dawn.h/2)+`" fill="`
+		+ink+`"  stroke=${pap} stroke-width='`+(ink=='transparent'?5:2)+`' `
+		+` onmouseup="event.stopPropagation();" `
+		+` onmousemove="event.stopPropagation();" `
+		+` onmousedown="if(!curve.checked){event.stopPropagation();} `
+		+` if(document.getElementById('ute'))ute.remove(); `
+		+` den1(this); `
+		+`move=`
+		+n+`;bok=0;"></ellipse>`;
 	au[n]={};for (let key in dawn){au[n][key] = dawn[key];}
 	bok=0;
 	pas();
@@ -571,42 +492,39 @@ const but04=()=>{// полигон
 	//if(n===6){}
 	if(a10.length>2){
 	figs.innerHTML+=
-		'<path class="fg" id="p'+n+'" d="m'
+		`<path class="fg" id='p`+n+`' d="m`
 		+a12
-		+'z" fill="'
-		+ink+'"  '
-		+((n!=6)?'stroke='+pap+' stroke-width="'+(ink=='transparent'?5:2)+'" ':'stroke="red" stroke-width="'+(ink=='transparent'?5:2)+'" ')
+		+`z" fill="`
+		+ink+`"  `
+		+((n!=6)?`stroke=${pap} stroke-width='`+(ink=='transparent'?5:2)+`' `:`stroke='red' stroke-width='`+(ink=='transparent'?5:2)+`' `)
 		
-		+' data-x="'
+		+` data-x='`
 		+(a11[0].x|0)
-		+'" data-y="'
-		+(a11[0].y|0)+'" '
-		+' onmouseup="onmu(event)" onmousemove="onmm(event)"'	
-		+' onmousedown="onmd4(event,this,'+n+',0)"'
-		+'></path>\r\n';//</ellipse>`;
+		+`' data-y='`
+		+(a11[0].y|0)+`' `
+		+` onmouseup="event.stopPropagation();" `
+		+` onmousemove="event.stopPropagation();" `
+		+` onmousedown="if(!curve.checked){event.stopPropagation();} `
+		+` if(document.getElementById('ute'))ute.remove(); `
+		+` den4(this,`+n+`); `
+		+`move=`
+		+n+`; bok=0;"></path>\r\n`;//</ellipse>`;
 		}
 	if(a10.length===2){//alert('line')
-	
-	let 
-	x01=a11[0].x|0,
-	y01=a11[0].y|0,
-	x02=(a11[0].x|0)+(a11[1].x|0),
-	y02=(a11[0].y|0)+(a11[1].y|0),
-	p01={x:x01,y:y01}, p02={x:x02,y:y02};
-	
-	if((x01==x02)&&(y01>y02))[p01,p02]=[p02,p01];//деструктуризация
-	if((y01==y02)&&(x01>x02))[p01,p02]=[p02,p01];
 	figs.innerHTML+=
-		'<line  class="fg" id="ll'+n+'"  x1="'
-		+p01.x+'" y1="'//		(a11[0].x|0)
-		+p01.y+'" x2="'//		(a11[0].y|0)
-		+p02.x+'" y2="'//		((a11[0].x|0)+(a11[1].x|0))
-		+p02.y+'" stroke="'//	((a11[0].y|0)+(a11[1].y|0))
-		+pap+'" stroke-linecap="square" stroke-width="5" '
-		+' onmouseup="onmu(event)" onmousemove="onmm(event)"'
-		+' onmousedown="onmd3(event,this,'+n+',0)"'
-
-		+'></line>';		
+		`<line  class="fg" id='ll`+n+`'  x1="`
+		+(a11[0].x|0)+`" y1="`
+		+(a11[0].y|0)+`" x2="`
+		+((a11[0].x|0)+(a11[1].x|0))+`" y2="`
+		+((a11[0].y|0)+(a11[1].y|0))+`" stroke="`
+		+ink+`" stroke-linecap="square" stroke-width="5" `
+		+` onmouseup="event.stopPropagation();" `
+		+` onmousemove="event.stopPropagation();" `
+		+` onmousedown="if(!curve.checked){event.stopPropagation();} `
+		+` if(document.getElementById('ute'))ute.remove(); `
+		+` den3(this); `
+		+`move=`
+		+n+`;bok=0;"></line>`;		
 		}	
 	au[n]={};for (let key in dawn){au[n][key] = dawn[key];}
 	bok=0;
@@ -633,19 +551,23 @@ const but05=()=>{// ромб
 	let a12=a11.map(v=>(v.x|0)+','+(v.y|0)).join(',');
 
 	if(document.getElementById('ute'))ute.remove();
+	//svg.innerHTML+=
 	figs.innerHTML+=
-		'<path class="fg" id="p'+n+'" d="m'
+		`<path class="fg" id='p`+n+`' d="m`
 		+a12
-		+'z" fill="'
-		+ink+'"  stroke="'+pap+'" stroke-width="'+(ink=='transparent'?5:2)+'" '
-		+' data-x="'
+		+`z" fill="`
+		+ink+`"  stroke=${pap} stroke-width='`+(ink=='transparent'?5:2)+`' `
+		+` data-x='`
 		+(a11[0].x|0)
-		+'" data-y="'
-		+(a11[0].y|0)+'" '
-		+' onmouseup="onmu(event)" onmousemove="onmm(event)"'
-		+' onmousedown="onmd4(event,this,'+n+',0)"'
-
-		+'></path>\r\n';//</ellipse>`;
+		+`' data-y='`
+		+(a11[0].y|0)+`' `
+		+` onmouseup="event.stopPropagation();" `
+		+` onmousemove="event.stopPropagation();" `
+		+` onmousedown="if(!curve.checked){event.stopPropagation();} `
+		+` if(document.getElementById('ute'))ute.remove(); `
+		+` den4(this,`+n+`); `
+		+`move=`
+		+n+`;bok=0;"></path>\r\n`;//</ellipse>`;
 	au[n]={};for (let key in dawn){au[n][key] = dawn[key];}
 	bok=0;
 	pas();
@@ -656,6 +578,7 @@ const but05=()=>{// ромб
 const but06=()=>{// самец
 	n++;
 	let px,py;
+	//b=[{x:0,y:50},{x:50,y:0},{x:100,y:50},{x:50,y:100}];
 	b=[{x:0,y:0},{x:100,y:0},{x:50,y:100}];	
 	let a10=b.map(i=>{
 		return {
@@ -671,19 +594,23 @@ const but06=()=>{// самец
 	let a12=a11.map(v=>(v.x|0)+','+(v.y|0)).join(',');
 
 	if(document.getElementById('ute'))ute.remove();
+	//svg.innerHTML+=
 	figs.innerHTML+=
-		'<path class="fg" id="p'+n+'" d="m'
+		`<path class="fg" id='p`+n+`' d="m`
 		+a12
-		+'z" fill="'
-		+ink+'"  stroke="'+pap+'" stroke-width="'+(ink=='transparent'?5:2)+'" '
-		+' data-x="'
+		+`z" fill="`
+		+ink+`"  stroke=${pap} stroke-width='`+(ink=='transparent'?5:2)+`' `
+		+` data-x='`
 		+(a11[0].x|0)
-		+'" data-y="'
-		+(a11[0].y|0)+'" '
-		+' onmouseup="onmu(event)" onmousemove="onmm(event)"'
-		+' onmousedown="onmd4(event,this,'+n+',0)"'
-
-		+'></path>\r\n';//</ellipse>`;
+		+`' data-y='`
+		+(a11[0].y|0)+`' `
+		+` onmouseup="event.stopPropagation();" `
+		+` onmousemove="event.stopPropagation();" `
+		+` onmousedown="if(!curve.checked){event.stopPropagation();} `
+		+` if(document.getElementById('ute'))ute.remove(); `
+		+` den4(this,`+n+`); `
+		+`move=`
+		+n+`;bok=0;"></path>\r\n`;//</ellipse>`;
 	au[n]={};for (let key in dawn){au[n][key] = dawn[key];}
 	bok=0;
 	pas();
@@ -711,19 +638,23 @@ const but07=()=>{// самка
 	let a12=a11.map(v=>(v.x|0)+','+(v.y|0)).join(',');
 
 	if(document.getElementById('ute'))ute.remove();
+	//svg.innerHTML+=
 	figs.innerHTML+=
-		'<path class="fg" id="p'+n+'" d="m'
+		`<path class="fg" id='p`+n+`' d="m`
 		+a12
-		+'z" fill="'
-		+ink+'"  stroke='+pap+' stroke-width="'+(ink=='transparent'?5:2)+'" '
-		+' data-x="'
+		+`z" fill="`
+		+ink+`"  stroke=${pap} stroke-width='`+(ink=='transparent'?5:2)+`' `
+		+` data-x='`
 		+(a11[0].x|0)
-		+'" data-y="'
-		+(a11[0].y|0)+'" '
-		+' onmouseup="onmu(event)" onmousemove="onmm(event)"'
-		+' onmousedown="onmd4(event,this,'+n+',0)"'
-
-		+'></path>\r\n';//</ellipse>`;
+		+`' data-y='`
+		+(a11[0].y|0)+`' `
+		+` onmouseup="event.stopPropagation();" `
+		+` onmousemove="event.stopPropagation();" `
+		+` onmousedown="if(!curve.checked){event.stopPropagation();} `
+		+` if(document.getElementById('ute'))ute.remove(); `
+		+` den4(this,`+n+`); `
+		+`move=`
+		+n+`;bok=0;"></path>\r\n`;//</ellipse>`;
 	au[n]={};for (let key in dawn){au[n][key] = dawn[key];}
 	bok=0;
 	pas();
@@ -731,6 +662,7 @@ const but07=()=>{// самка
 	}	
 	
 const but08=()=>{// фиал
+//dawn.w=300; dawn.h=260; dawn.x=160; dawn.y=100;
 	n++;
 	let px,py;
 	b=[
@@ -773,17 +705,21 @@ const but08=()=>{// фиал
 	if(document.getElementById('ute'))ute.remove();
 	//svg.innerHTML+=
 	figs.innerHTML+=
-		'<path class="fg" id="p`+n+`" d="m'
+		`<path class="fg" id='p`+n+`' d="m`
 		+a12
-		+'z" fill="'
-		+ink+'"  stroke='+pap+' stroke-width="'+(ink=='transparent'?5:2)+'" '
-		+' data-x="'
+		+`z" fill="`
+		+ink+`"  stroke=${pap} stroke-width='`+(ink=='transparent'?5:2)+`' `
+		+` data-x='`
 		+(a11[0].x|0)
-		+'" data-y="'
-		+(a11[0].y|0)+'" '
-		+' onmouseup="onmu(event)" onmousemove="onmm(event)"'
-		+' onmousedown="onmd4(event,this,'+n+',0)"'
-		+'></path>\r\n';//</ellipse>`;
+		+`' data-y='`
+		+(a11[0].y|0)+`' `
+		+` onmouseup="event.stopPropagation();" `
+		+` onmousemove="event.stopPropagation();" `
+		+` onmousedown="if(!curve.checked){event.stopPropagation();} `
+		+` if(document.getElementById('ute'))ute.remove(); `
+		+` den4(this,`+n+`); `
+		+`move=`
+		+n+`;bok=0;"></path>\r\n`;//</ellipse>`;
 	au[n]={};for (let key in dawn){au[n][key] = dawn[key];}
 	bok=0;
 	pas();
@@ -821,6 +757,7 @@ const but09=()=>{// чаша
 			c: i.c,
 		}});
 	let a11=a10.map((j,k)=>{
+		//let o={x:(j.x-px),y:(j.y-py),c:j.c};
 		let o={x:(j.x),y:(j.y),c:j.c};
 		px=j.x;
 		py=j.y;
@@ -831,18 +768,23 @@ const but09=()=>{// чаша
 	let a12=a11.map(v=>((v.c)?'c':'')+(v.x|0)+','+(v.y|0)).join(',');
 
 	if(document.getElementById('ute'))ute.remove();
+	//svg.innerHTML+=
 	figs.innerHTML+=
-		'<path class="fg" id="p'+n+'" d="m'
+		`<path class="fg" id='p`+n+`' d="m`
 		+a12
-		+'z" fill="'
-		+ink+'"  stroke='+pap+' stroke-width="'+(ink=='transparent'?5:2)+'" '
-		+' data-x="'
+		+`z" fill="`
+		+ink+`"  stroke=${pap} stroke-width='`+(ink=='transparent'?5:2)+`' `
+		+` data-x='`
 		+(a11[0].x|0)
-		+'" data-y="'
-		+(a11[0].y|0)+'" '
-		+' onmouseup="onmu(event)" onmousemove="onmm(event)"'
-		+' onmousedown="onmd4(event,this,'+n+',0)"'
-		+'></path>\r\n';//
+		+`' data-y='`
+		+(a11[0].y|0)+`' `
+		+` onmouseup="event.stopPropagation();" `
+		+` onmousemove="event.stopPropagation();" `
+		+` onmousedown="if(!curve.checked){event.stopPropagation();} `
+		+` if(document.getElementById('ute'))ute.remove(); `
+		+` den4(this,`+n+`); `
+		+`move=`
+		+n+`;bok=0;"></path>\r\n`;//
 	au[n]={};for (let key in dawn){au[n][key] = dawn[key];}
 	bok=0;
 	pas();
@@ -886,22 +828,44 @@ a10.push(a10[0]);
 	//svg.innerHTML+=
 	if(a10.length>2){
 	figs.innerHTML+=
-	
-		'<path class="fg" id="p'+n+'" d="m'		
+		`<path class="fg" id='p`+n+`' d="m`
+		//+a12
 		+a13
-		+'z" fill="'		
-		+ink+'"  '
-		+'stroke="'+pap+'" stroke-width="'+(ink=='transparent'?5:2)+'" '				
-		+' data-x="'
-		+(a11[0].x|0)
-		+'" data-y="'
-		+(a11[0].y|0)+'" '
-		+' onmouseup="onmu(event)" onmousemove="onmm(event)"'
-		+' onmousedown="onmd4(event,this,'+n+',0)"'
-		+'></path>\r\n';//</ellipse>`;
-		}
+		+`z" fill="`
+		//+ink+`"  stroke='black' stroke-width='1' `${pap}
 		
-
+		+ink+`"  `
+		+((n!=6)?`stroke=${pap} stroke-width='`+(ink=='transparent'?5:2)+`' `:`stroke='red' stroke-width='5' `)		
+		
+		+` data-x='`
+		+(a11[0].x|0)
+		+`' data-y='`
+		+(a11[0].y|0)+`' `
+		+` onmouseup="event.stopPropagation();" `
+		+` onmousemove="event.stopPropagation();" `
+		+` onmousedown="if(!curve.checked){event.stopPropagation();} `
+		+` if(document.getElementById('ute'))ute.remove(); `
+		+` den4(this,`+n+`); `
+		+`move=`
+		+n+`; bok=0;"></path>\r\n`;//</ellipse>`;
+		}
+		/*
+	if(a10.length===2){//alert('line')
+	figs.innerHTML+=
+		`<line  class="fg" id='ll`+n+`'  x1="`
+		+(a11[0].x|0)+`" y1="`
+		+(a11[0].y|0)+`" x2="`
+		+((a11[0].x|0)+(a11[1].x|0))+`" y2="`
+		+((a11[0].y|0)+(a11[1].y|0))+`" stroke="`
+		+ink+`" stroke-linecap="square" stroke-width="5" `
+		+` onmouseup="event.stopPropagation();" `
+		+` onmousemove="event.stopPropagation();" `
+		+` onmousedown="if(!curve.checked){event.stopPropagation();} `
+		+` if(document.getElementById('ute'))ute.remove(); `
+		+` den3(this); `
+		+`move=`
+		+n+`;bok=0;"></line>`;		
+		}	*/
 	au[n]={};for (let key in dawn){au[n][key] = dawn[key];}
 	bok=0;
 	pas();
@@ -1124,200 +1088,7 @@ const cpy=x=>{ // копирование в буфер обмена
 	document.execCommand('copy');
 } 
 //*****************************************************************//
-const dev=()=>{
-	aw=[];// брезентов поле под огурцы
-	for (let i=0; i<(420/10|0); i++)
-		{aw.push([]); for (let j=0; j<(900/10|0); j++)aw[i].push(0)}
-	/*
-	for (let i=0; i<(10); i++)
-		{aw.push([]); for (let j=0; j<(10); j++)aw[i].push(0)}
-	*/
-	let p=0;
-	const cry=y=>aw[y].map(c=>+y).join('.');
-	const sry=y=>aw[y].join('.');
-	const crx=x=>aw.map(c=>+x).join('.');
-	const srx=x=>aw.map(c=>c[x]).join('.');	
-	const poy=(y,s)=>{aw[y]=aw[y].map((c,i)=>+s.split('.')[i]);}
-	const pox=(x,s)=>{aw.forEach((c,i)=>{aw[i][x]=+s.split('.')[i]});}	
-	//********************+
-	
-	const line2=(c,p)=>{	
-			let x1=c.getAttribute('x1')/10|0;
-			let y1=c.getAttribute('y1')/10|0;
-			let x2=c.getAttribute('x2')/10|0;//x1+
-			let y2=c.getAttribute('y2')/10|0;//y1+		
-	//------------------проверь что справва и слева один цвет
-	for(let i=x1; i<x2; i++){if(aw[y1][i]!==aw[y1-1][i])return p}//
-	for(let j=y1; j<y2; j++){if(aw[j][x1]!==aw[j][x1-1])return p}//
-	//------------------
-			p++;
-		
-			let c1=aw[y1][x1];//жертвацвет
-			if(y1==y2){
-				//alert('liiin');
-				for(let i=x1; i<x2; i++){
-					if(aw[y1][i]==c1){
-						let j=y1;
-						while((j<aw.length)&&(aw[j][i]==c1)){//
-							aw[j][i]=p;
-							j++;						
-							}						
-						}
-						else{
-						let j=y1;
-						c1=aw[y1][i];
-						p++;
-						while((j<aw.length)&&(aw[j][i]==c1)){//&&j<aw.length
-							aw[j][i]=p;
-							j++
-							}
-						}
-					}
-				}
-			
-			if(x1==x2){
-				//alert('liiin');
-				for(let i=y1; i<y2; i++){
-					if(aw[i][x1]==c1){
-						let j=x1;
-						while((j<aw[0].length)&&(aw[i][j]==c1)){//(j<aw[0].length)&&
-							aw[i][j]=p;
-							j++;						
-							}						
-						}
-						else{
-						let j=x1;
-						c1=aw[i][x1];
-						p++;
-						while((j<aw[0].length)&&(aw[i][j]==c1)){//&&j<aw[0].length
-							aw[i][j]=p;
-							j++
-							}
-						}
-					}
-				}	
-	return p;
-	}
-	//---------------------------
-	aw=aw.map(y=>y.map(x=>0));	// массив обнуляется
-	let f=[...document.querySelectorAll('#figs rect, #figs line')];
-	
-	f.forEach(c=>{
-	//alert(c.tagName)
-	switch(c.tagName){
-		case 'rect':{
-			//alert('квадр');
-			if (c.style.fill!=='transparent'){
-			//alert('plot');
-			p++;
-			let xx=c.getAttribute('x')/10|0;//alert(xx);
-			let ww=xx+c.getAttribute('width')/10|0;//alert(ww);
-			let yy=c.getAttribute('y')/10|0;//alert(yy);
-			let hh=yy+c.getAttribute('height')/10|0;//alert(hh);
-			
-			for(let x=xx; x<ww; x++)
-				for(let y=yy; y<hh; y++){
-					aw[y][x]=p;
-					//console.log([x,y].join(' '));
-					}
-			}else{}
-			break;
-			}
-		case 'line':{
-			//alert('линия');
-			p=line2(c,p);
-			break;
-			}//line
-		}
-	});//f.forEach
-	
-	//alert(sry(0));alert(i);
-	//aw.forEach((c,i)=>{alert(sry(i))}); 
-	
-	/**/
-	/**/
-	let sn='';//подвижки
-	sn=cry(0);
-	let nky=0;
-	aw.forEach((c,i)=>{let d=sry(i); 
-		//alert(d);
-		if (d!==sn){ poy(nky,d); nky++; sn=d;}
-		});
-		
-	//alert(nk);
-	//aw=aw.map((c,i)=>{if (i>=nk){ return c.map(u=>0)} else return c});
-//aw=aw.map((c,i)=>(i<nky)?c.map(u=>u):c.map(u=>0));//ЧЖАТИЕ
-	//aw=aw.map((c,i)=>(i<nk)?c.map(u=>9):c.map(u=>8));
-	//poy(0,'5.5.5.5.5.5.5.5.5.5');
-	//alert([aw.length,aw[0].length].join(' '));
-	//alert(f.length);
-	//alert(sry(6));
-	//console.log(aw);
-	//pox(8,crx(4));
-	//let aww=aw;//.slice(0,nky);
-	//alert(nky);
-	/**/
-	//alert(crx(7));
-	//alert(srx(0));
-	/**/
-	sn=crx(0);// еще подвижки
-	let nk=0;	
-	aw.forEach((c,i)=>{
-		let d=srx(i); 
-		if (d!==sn){ pox(nk,d); nk++; sn=d;}
-		});	
-		
-//aw=aw.map(c=>c.map((u,i)=>(i<nk)?u:0));	// сжаттие
-	//aw=aw.map(c=>c.map((u,i)=>9));
-	//console.log(aww);
-aw=aw.map(c=>c.slice(0,nk-1));// обрезка 101
-	
-aw=aw.slice(0,nky-1);// обрезка 101
-	//console.log(aw);
-	
-	
-	let s=tbl(aw);
-	
-	pascal.innerHTML='<br>'+s.replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('\r\n','<br>');
-	pascal.innerHTML+=
-		'<div class="copybara" '
-		+'onclick="cpy(this.parentElement);">'
-		+'</div>';
-		
-	console.log(s);//	
-}
-//------------------------------------------
-const tbl=a=>{
-	if(!a.length)alert('empty');
-	console.log(a);
-	let s='';
-	for (let i=0; i<a.length; i++){
-		s+='<tr>';
-		for (let j=0; j<a[0].length; j++){
-			let v=a[i][j];// жертвацвет
-			if(!v)continue;
-			let ii=i, jj=j, jjj;
-			while ((ii<a.length)&&(a[ii][jj]==v)){
-				while ((jj<a[0].length)&&(a[ii][jj]==v)){
-					a[ii][jj]=0;					
-					jj++
-					}
-				ii++;
-				jjj=jj;
-				jj=j;
-				}
-			s+='<td'+
-				(' rowspan="'+(ii-i)+'" colspan="'+(jjj-j)+'"')
-				.replace(' rowspan="1"','')
-				.replace(' colspan="1"','')+'></td>';	
-			}
-		s+='</tr>\r\n';
-		}    
-	return '<table>\r\n'+s+'</table>';
-	}
-
-//------------------------------------------
 grid();
 </script>   
-
-</body></html>
+</body>
+</html>
